@@ -35,6 +35,17 @@ bool isEmpty(){
     return top == nullptr;
 }
 
+//清空栈
+void clear(){
+    node* p;
+    while(top != nullptr){
+        p=top;
+        top=top->next;
+        delete p;
+    }
+    top=nullptr;
+}
+
 int main(){
     push(10);
     push(20);
